@@ -3,23 +3,27 @@
 
 package extras;
 
+import javax.swing.JOptionPane;
+
 import org.jointheleague.graphical.robot.Robot;
 
 public class DizzyRobot {
-	static Robot robot = new Robot();
-	public static void main(String[] args) {
-		
-		 // 2. Ask the user how dizzy you want the robot from 1-10, then spin that number of times.
+	static Robot a45 = new Robot();
 
- // 1. Use the dance method to make the robot spin.
-	
+	public static void main(String[] args) {
+		a45.setSpeed(10);
+		// 2. Ask the user how dizzy you want the robot from 1-10, then spin that number
+		// of times.
+		String input = JOptionPane.showInputDialog("how dizzy 1-10");
+		int num = Integer.parseInt(input);
+		// 1. Use the dance method to make the robot spin.
+		dance(num);
 
 	}
 
 	static void dance(int numberOfSpins) {
 		for (int i = 0; i < numberOfSpins; i++) {
-			robot.turn(360);
+			a45.turn(360);
 		}
 	}
 }
-
